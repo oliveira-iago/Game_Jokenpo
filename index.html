@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta  name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="/js/images_base64.js"></script>
+    
+    <!-- Page options-->
+    <title>Jokenpô</title>
+    <link id="icon-page" rel="icon">
+</head>
+<body onload="refreshImages()">
+    <header>
+        <h1 style="font-size: 45px;">Jokenpô</h1>    
+    </header>
+    <div class="main">
+        <!-- USER-->
+        <div class="card user">
+            <div class="name user">
+                <label>Player</label>
+            </div>
+            <div class="container-card">
+                <div class="profile user">
+                    <img id="img-profile-user" alt="User"/>
+                </div>
+                <div class="hand user">
+                    <img id="img-hand-user"/>
+                </div>
+            </div>
+        </div>
+
+        <!-- Container Game-->
+        <div class="container-game">
+            <!-- Result-->
+            <div class="container-result">
+                <label id="result"></label>
+            </div>
+
+            <!-- Options-->
+            <div class="container-options">
+                <!-- Rock-->
+                <div id="rock" class="option" style="margin-inline: 0;" onclick="selectHand('rock')">
+                    <img id="img-rock" alt="Rock"/>
+                </div>
+    
+                <!-- Paper-->
+                <div id="paper" class="option" onclick="selectHand('paper')">
+                    <img id="img-paper" alt="Paper"/>
+                </div>
+    
+                <!-- Scissors-->
+                <div id="scissors" class="option" style="margin-inline: 0;" onclick="selectHand('scissors')">
+                    <img id="img-scissors" alt="Tesoura"/>
+                </div>
+            </div>
+
+            <!-- Play Button-->
+            <div id="play-button" onclick="play()">
+                <a>Play!</a>
+            </div>
+        </div>
+        
+        
+        <!-- BOT-->
+        <div class="card bot">
+            <div class="name bot">
+                <label>Bot</label>
+            </div>
+            <div class="container-card">
+                <div class="profile bot">
+                    <img id="img-profile-bot" alt="Bot"/>
+                </div>
+                <div class="hand bot">
+                    <img id="img-hand-bot"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
